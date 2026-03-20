@@ -1,0 +1,13 @@
+[Unit]
+Description=Pi Camera Recording
+After=multi-user.target
+
+[Service]
+ExecStart=/home/tbas/record.sh
+WorkingDirectory=/home/tbas
+User=tbas
+Restart=on-failure
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
